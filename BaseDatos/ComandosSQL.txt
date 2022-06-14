@@ -1,0 +1,112 @@
+#creacion base de datos
+CREATE DATABASE 'nombre_baseDatos';
+
+show databases; ver desde la terminal, las bbdd
+
+use basedadato; usar bbdd
+
+show tables; mostrar tablas
+
+describe nombre_tabla; vemos estructura de tabla
+
+select * from nombre_tabla; selecciona todo de la tabla
+
+truncate table clientes; vaciar la tabla
+
+drop table clientes; eliminar la tabla
+
+drop database ejemplo; eliminar bbdd
+
+
+CREATE TABLE nombre_tabla(
+	nombre_columna1 tipo_dato restriccion autoincrement,
+	nombre_columna2 tipo_dato,
+	nombre_columna3 tipo_dato,
+	nombre_columna4 tipo_dato,
+	PRIMARY KEY (nombre_columna1),
+	ADD FOREIGN KEY (nombre_columnafk) REFERENCES otra_tabla(nombre_pk)
+)
+
+CREATE table clientes(id int PRIMARY KEY NOT NULL AUTO_INCREMENT,nombre varchar(30),correo varchar(50));
+
+---create
+INSERT INTO nombre_tabla (nombre_columna1, ...) VALUES (valor1, ...);
+
+---read
+select * from clientes;
+
+---update
+update nombre_tabla
+set nombre_columna = valor_nuevo, nombre_columna2 = valor_nuevo2
+where condicion;
+
+
+---modificar tabla
+ALTER TABLE nombre_tabla
+ADD nombre_columna tipo restriccion
+
+---eliminar columna
+ALTER TABLE nombre_tabla drop column nombre_columna
+
+---unir llave foranea a otra tabla
+ALTER TABLE clientes
+ADD FOREIGN KEY (direccionId) REFERENCES direcciones(id);
+
+---agregar constraint
+ALTER TABLE clientes
+ADD CONSTRAINT FK_direccionId -- asignar nombre a la relacion
+ADD FOREIGN KEY (direccionId) REFERENCES direcciones(id);
+
+---mostrar la creacion de la tabla
+show create table nombre_tabla;
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO registros(codigo, rut) VALUES ('3745', '19.684.462-5');
+INSERT INTO registros(codigo, rut) VALUES ('6783', '23.845.798-0');
+INSERT INTO registros(codigo, rut) VALUES ('8452', '20.624.642-k');
+INSERT INTO registros(codigo, rut) VALUES ('9453', '22.985.972-7');
+
+INSERT INTO cursos(nombre, descripcion) VALUES ('Alfa', 'Los alfalarios');
+INSERT INTO cursos(nombre, descripcion) VALUES ('Beta', 'Los betalarios');
+INSERT INTO cursos(nombre, descripcion) VALUES ('Gamma', 'Los gamalarios');
+INSERT INTO cursos(nombre, descripcion) VALUES ('Delta', 'Los detalarios');
+
+INSERT INTO direcciones(nombre, numero, ciudad, region, pais) VALUES ('Humberto Diaz', 15222,'Santiago', 13, 1);
+INSERT INTO direcciones(nombre, numero, ciudad, region, pais) VALUES ('Lenka Franulic', 14369,'Santiago', 13, 1);
+INSERT INTO direcciones(nombre, numero, ciudad, region, pais) VALUES ('David Rosenmann', 18954,'Santiago', 13, 1);
+INSERT INTO direcciones(nombre, numero, ciudad, region, pais) VALUES ('Ernesto Carmona', 17545,'Santiago', 13, 1);
+
+ALTER TABLE alumnos
+ADD FOREIGN KEY (cursos_id) REFERENCES cursos(id);
+
+ALTER TABLE alumnos
+ADD FOREIGN KEY (registros_id) REFERENCES registros(id);
+
+ALTER TABLE alumnos
+ADD FOREIGN KEY (direcciones_id) REFERENCES direcciones(id);
+
+INSERT INTO alumnos(nombre, apellido, edad, cursos_id, registros_id, direcciones_id) VALUES('Wladimir', 'Rojas', 15, 2, 3, 1);
+INSERT INTO alumnos(nombre, apellido, edad, cursos_id, registros_id, direcciones_id) VALUES('Carlos', 'Iturra', 14, 1, 1, 2);
+INSERT INTO alumnos(nombre, apellido, edad, cursos_id, registros_id, direcciones_id) VALUES('Constanza', 'Mardones', 15, 3, 4, 3);
+INSERT INTO alumnos(nombre, apellido, edad, cursos_id, registros_id, direcciones_id) VALUES('Ricardo', 'Recado', 16, 4, 2, 4);
+
+
+
+
+
+
+
+
+
+
+
+
