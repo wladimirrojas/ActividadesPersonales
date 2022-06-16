@@ -27,6 +27,11 @@
 			<form:label path="edad">Edad: </form:label>
 			<form:input type="number" path="edad" for="edad"/>
 			<br>
+			<br>
+			<form:label path="password">Password: </form:label>
+			<form:input type="password" path="password" for="password"/>
+			<br>
+			<br>			
 			<input type="submit" value="Registrar">
 				
 		</form:form>
