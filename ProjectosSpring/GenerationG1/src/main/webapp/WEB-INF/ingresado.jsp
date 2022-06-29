@@ -9,7 +9,7 @@
 <title>Felicitaciones</title>
 </head>
 <body>
-<h1>FELICIDADES POR UN INGRESO</h1>
+<h1>FELICIDADES POR UN INGRESO EN LA BASE DE DATOS, AHORA QUÉ, UN CHISTE?</h1>
 
 </body>
 </html>

@@ -16,7 +16,7 @@ public class IndexController {
 		model.addAttribute("nombre", "Wladimir");
 
 		// pasando el objeto a la vista
-		Usuario usuario = new Usuario("Wladimir", "Rojas", 27);
+		Usuario usuario = new Usuario();
 
 		model.addAttribute("usuario", usuario);
 		return "index.jsp";

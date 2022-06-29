@@ -1,5 +1,7 @@
 package com.generation.services;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,11 @@ public class UsuarioService {
 		
 	}
 	/** Logica de negocio, o validaciones del sistema */
+
+	public List<Usuario> findAll() {
+		
+		return usuarioRepository.findAll();
+	}
 	
 	
 

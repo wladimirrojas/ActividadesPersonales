@@ -1,5 +1,7 @@
 package com.generation.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,15 +48,14 @@ public String guardarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, 
 		if (resultado.hasErrors()) { //capturando si existe un error en el ingreso de datos desde el jsp
 			model.addAttribute("msgError", "Debe realizar ingreso correcto de los datos");
 			return "registro.jsp";
-		}else {
-		
-		System.out.println(usuario.getNombre() + " " + usuario.getApellido() + " " + usuario.getEdad());
-		
+		}else {		
 		//enviar objeto al service
 		usuarioService.saveUsuario(usuario);
+		List<Usuario> listaUsuarios = usuarioService.findAll();
+		model.addAttribute("usuariosCapturados", listaUsuarios);
 		
 		
-		return "ingresado.jsp";
+		return "mostrarUsuariosBoot.jsp";
 		}
 	}
 	
