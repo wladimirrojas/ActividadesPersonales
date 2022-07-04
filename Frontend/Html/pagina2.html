@@ -11,6 +11,37 @@
 <body>
     <h1>Estoy en la página 2</h1>
     <a href="index.html">Volver a la página principal</a>
+    <br>
+    <!-- Radio button -->
+    <h2>Elija una opción</h2>
+    <input type="radio" id="html" name="opcion" value="html">HTML<br>
+    <input type="radio" id="css" name="opcion" value="css">CSS<br>
+    <input type="radio" id="js" name="opcion" value="javascript">Javascript<br>
+    <br>
+    <hr>
+    <!-- checkbox -->
+    <h2>Elija varias opciones si desea</h2>
+    <input type="checkbox" id="opciones1" name="opciones1" value="html"><label for="opciones1">HTML</label><br>
+    <input type="checkbox" id="opciones2" name="opciones2" value="css">CSS<br>
+    <input type="checkbox" id="opciones3" name="opciones3" value="js">JavaScript<br>
+    <br>
+    <hr>
+    <!-- Select -->
+    <h2>Seleccione una opción</h2>
+    <!-- lenguajes -->
+    <select id="lenguajes" name="lenguajes"> <!-- se puede agregar la palabra multiple -->
+        <option value="0" selected>Seleccione un lenguaje</option>
+        <option value="1">Java</option> <!-- se puede usar la palabra selected para tenerla seleccionada por defecto -->
+        <optgroup label="Python Version">
+        <option value="2">Python 2</option>
+        <option value="3">Python 3</option>
+    </optgroup>
+        <option value="3">JavaScript</option>
+        <option value="4">C#</C></option>
+        <option value="5">Ruby</C></option>
+    </select>
+
+
 </body>
 
 </html>

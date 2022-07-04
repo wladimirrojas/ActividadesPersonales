@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCS2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        p {
+            width: 200px;
+            height: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10pt;
+            font-weight: 300;
+            /* grosor de fuente */
+        }
+        
+        div {
+            width: 400px;
+            height: 400px;
+            overflow: scroll;
+            background: url("assets/img/html5.jpg") no-repeat center;
+            background-color: #a2b9a5;
+            background-size: 50%;
+            border: 10px solid rgb(150, 0, 0);
+            border-top-color: rgba(57, 68, 160, 0.274);
+            border-radius: 10px;
+            text-align: center;
+            /* barra de desplazamiento */
+        }
+        
+        a {
+            text-decoration: none;
+            /* le quita la línea */
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .estatico {
+            width: 500px;
+            height: 50px;
+            position: static;
+            /* posicion original */
+            overflow: auto;
+        }
+        
+        .relativo {
+            /* relativo es referente al último elemento */
+            width: 500px;
+            height: 50px;
+            position: relative;
+            /* posicion relativa */
+            overflow: auto;
+            left: 50px;
+            /* la izquierda tiene prioridad, existen top, right, left, bottom */
+        }
+        
+        .fijo {
+            /* fijar referente a la página */
+            width: 500px;
+            height: 50px;
+            position: fixed;
+            right: 50px;
+            top: 0px;
+        }
+        /* posicion,: static, relative, fixed, absolute, st */
+        /*hexadecimal 16: 0123456789ABCDEF
+#12 34 56   los primeros dos corresponden a rojo, los segundos al verde y los terceros al azul
+*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Elementos de estilo</h1>
+        <a href="#">Link de prueba</a>
+        <p>Párrafo</p>
+    </div>
+    <div class="estatico">
+        <p>Este es un texto con posición estática</p>
+
+    </div>
+    <div class="relativo">
+        <p>Este es un texto con posición estática</p>
+
+    </div>
+    <div class="fijo">
+        <p>Este es un texto con posición estática</p>
+
+    </div>
+</body>
+
+</html>

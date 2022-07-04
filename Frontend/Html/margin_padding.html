@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin y Padding</title>
+    <style>
+        #padre {
+            width: 400px;
+            height: 400px;
+            background-color: rgba(0, 183, 255, 0.603);
+            margin: 10px 20px;
+            /* si se agregan dos valores, complementa los pixeles arriba-abajo y luego izquierda-derecha, todo en reloj top > right > down > left*/
+            border: 1px solid orange;
+            /* no solo pinta el borde, sino que no permite que los hijos no muevan al padre */
+        }
+        
+        #hijo {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            display: inline-block;
+            /* elimina el ancho no visible del objeto, ya que depende del otro objeto*/
+        }
+        
+        #hijo2 {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(0, 0, 0);
+            display: inline-block;
+        }
+        
+        a {
+            display: block;
+            background-color: silver;
+        }
+        /*
+        p {
+            display: inline;
+             elimina el margin 
+            display: inline-block;
+             mantiene el margin 
+            display: block;
+             tipo block 
+        }*/
+        /* margin como efecto optico proboca desplazamiento, pero el elemento crece */
+        /* padding desplaza los objetos */
+        /* elementos inline <a> <img> <input> <label> <select> <textarea> */
+        /* elementos block <body> <form> <div> <h1> <h6> <p> <table> <ul> <ol> <> <> */
+        /* nunca poner elementos de BLOCK dentro de elementos INLINE */
+        
+        #default1 {
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+        
+        #default2 {
+            width: 50px;
+            height: 200px;
+            background-color: blue;
+            display: inline-block;
+        }
+        
+        #top1 {
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+            vertical-align: top;
+            /* alineacion del elemento */
+        }
+        
+        #top2 {
+            width: 50px;
+            height: 200px;
+            background-color: blue;
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        #mid1 {
+            width: 50px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+            vertical-align: middle;
+            /* alineacion del elemento */
+        }
+        
+        #mid2 {
+            width: 50px;
+            height: 200px;
+            background-color: blue;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="padre">
+        <div id="hijo"></div>
+        <div id="hijo2"></div>
+    </div>
+    <!-- nunca block dentro de inline -->
+    <a href="index.html">
+        <h1></h1>
+    </a>
+
+    <a href="#grupo1">grupo1</a>
+    <a href="#grupo1">grupo2</a>
+    <a href="#grupo1">grupo3</a>
+    <a href="#grupo1">grupo4</a>
+    <a href="#grupo1">grupo5</a>
+    <a href="#grupo1">grupo6</a>
+
+    <p>asdfhgjfdfstadfgh df hstsgdgfhgj sdzdsdsdhdfj htsd h</p>
+    <p>sgfhht ghwrtyrtr atytyte ghdtrytraysrdtjyr dhfhhst rdjyhy</p>
+
+    <!-- alineacion por defecto -->
+    <div>
+        <div id="default1">
+        </div>
+        <div id="default2">
+
+        </div>
+    </div>
+    <!-- alineacion a top vertical -->
+    <div>
+        <div id="top1">
+        </div>
+        <div id="top2">
+
+        </div>
+    </div>
+    <br>
+    <!-- alineacion a mid vertical -->
+    <div>
+        <div id="mid1">
+        </div>
+        <div id="mid2">
+
+        </div>
+    </div>
+</body>
+
+</html>

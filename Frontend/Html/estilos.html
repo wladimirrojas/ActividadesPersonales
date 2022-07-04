@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* 3 formas básicas de asignar un estilo */
+        /* estilo a través del elemento HTML, todas las etiquetas se afectan */
+        
+        div {
+            background-color: blue;
+            width: 500px;
+            margin: 10px;
+        }
+        
+        p {
+            background-color: green;
+        }
+        
+        img {
+            width: 40em;
+            /* px pixel / % de la página / * utilizar multiplos de EM=16px */
+        }
+        /* por clases: se ven afectadas, sólo aquellas que tengan la clase IMPORTANTE: todo lo que tenga la clase,
+         independiente del tipo de elemento, todas se ven afectadas y hereda a todo lo que no tenga class */
+        
+        .parrafosRojos {
+            color: red;
+            /* color cambia el color de letra */
+            background-color: black;
+        }
+        
+        .prueba {
+            color: orange;
+        }
+        
+        .prueba2 {
+            color: blueviolet;
+        }
+        /* estilo específico para una etiqueta */
+        
+        #importante {
+            color: black;
+            background-color: red;
+            /*  */
+        }
+        
+        #pg1 {
+            color: orangered;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Párrafo 1</p>
+        <p class="parrafosRojos">Párrafo 2</p>
+        <p id="importante">Párrafo 3</p>
+        <p>Párrafo 4</p>
+        <img src="/assets/img/html5.jpg" alt="front">
+    </div>
+
+    <p class="generation1" id="pg1">Párrafo 6</p>
+    <p class="prueba prueba2">Prueba de párrafo</p>
+</body>
+
+</html>
