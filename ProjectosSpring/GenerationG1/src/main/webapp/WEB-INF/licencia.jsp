@@ -19,33 +19,33 @@
 			<c:out value="${msgError}"></c:out>
 		</c:if>
 		<form:form action="/licencia/guardar" method="post" modelAttribute="licencia">
-			<form:label path="numero" class="form-label" >Numero:</form:label>
+			<form:label path="numero" class="form-label">Numero:</form:label>
 			<form:input path="numero" type="number" class="form-control" />
 			<br>
 			<form:label path="fechaVencimiento" class="form-label">Fecha Vencimiento:</form:label>
-			<form:input path="fechaVencimiento" type="date" min="${cincoExtraHoy}" class="form-control"/>
+			<form:input path="fechaVencimiento" type="date"
+				min="${cincoExtraHoy}" class="form-control" />
 			<br>
 			<form:label path="clase" class="form-label">Clase:</form:label>
-			<form:input type="text" path="clase" class="form-control"/>
+			<form:input type="text" path="clase" class="form-control" />
 			<br>
 			<form:label path="estado" class="form-label">Estado:</form:label>
-			<form:input type="text" path="estado" class="form-control"/>
+			<form:input type="text" path="estado" class="form-control" />
 			<br>
 			<!-- USUARIO -->
 			<form:select path="usuario" class="form-select">
-			
 				<form:option value="0">Seleccione un usuario</form:option>
-				<c:forEach  var="usuario" items="${listaUsuarios}">
-				<c:if test="${usuario.licencia.id == null}">
-					<form:option value="${usuario.id}">${usuario.nombre} ${usuario.apellido} </form:option>
+				<c:forEach var="usuario" items="${listaUsuarios}">
+					<c:if test="${usuario.licencia.id == null}">
+						<form:option value="${usuario.id}">${usuario.nombre} ${usuario.apellido} </form:option>
 					</c:if>
-				</c:forEach>				
-			</form:select>	
+				</c:forEach>
+			</form:select>
 			<br>
-			<button type="submit" class="btn btn-outline-primary">Guardar Licencia</button>
+			<button type="submit" class="btn btn-outline-primary">Guardar
+				Licencia</button>
 		</form:form>
-		<br>
-		<br>
+		<br> <br>
 		<table class="table">
 			<thead>
 				<tr>
@@ -65,8 +65,8 @@
 						<td>${licencia.fechaVencimiento}</td>
 						<td>${licencia.clase}</td>
 						<td>${licencia.estado}</td>
-						<td>${licencia.usuario.nombre} ${licencia.usuario.apellido}</td>
-						
+						<td>${licencia.usuario.nombre}${licencia.usuario.apellido}</td>
+
 						<!-- 
 						<td><a class="btn btn-warning" href="/registrar/editar/${auto.id}" role="button">Editar</a></td>
 						<td><a class="btn btn-danger" href="/registrar/eliminar/${auto.id}" role="button">Eliminar</a></td> -->
@@ -74,7 +74,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		
+
 	</div>
 </body>
 </html>

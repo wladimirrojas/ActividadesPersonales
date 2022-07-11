@@ -30,10 +30,6 @@ public class LicenciaController {
 	@RequestMapping("")
 	public String despliegue(Model model) {
 		model.addAttribute("licencia", new Licencia());
-
-		LocalDateTime hoy = LocalDateTime.now();
-		LocalDateTime cincoExtraHoy = hoy.plusDays(5);
-		model.addAttribute("diaMinimo", cincoExtraHoy);
 		
 		// lista de usuarios para desplegar
 		List<Usuario> listaUsuarios = usuarioService.findAll();
