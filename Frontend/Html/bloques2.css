@@ -1,0 +1,66 @@
+/* Utilice las siguientes clases para esta actividad
+.col-{numero, blank, auto}
+.row
+.bg-{color}
+.p-{numero} (el espaciado (paddings) puede ser aplicado en diferentes formas. Más detalles aquí).
+.m-{number} (lo mismo que el atributo anterior)
+.text-{color}
+.container
+getbootstrap.comgetbootstrap.com
+Spacing
+Bootstrap includes a wide range of shorthand responsive margin and padding utility classes to modify an element’s appearance.
+ */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#principal {
+    background-color: white;
+    padding: 10px
+}
+
+#subheader {
+    background-color: midnightblue;
+    height: 100px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+}
+
+#header {
+    background-color: aqua;
+    width: 33%;
+    height: 33%;
+    padding: 3px;
+    margin: 10px;
+}
+
+#Aside {
+    background-color: aqua;
+    width: 30%;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+#main {
+    background-color: orangered;
+    width: 68.2%;
+    height: 500px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.Article {
+    background-color: white;
+    width: 45%;
+    height: 70%;
+    display: inline-block;
+}
+
+#footer {
+    background-color: green;
+    height: 70px;
+    margin-top: 10px;
+}

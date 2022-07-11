@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 1 getter y setter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            //elemento, clase y id  --> dar funcionalidad
+            //$().evento(); estructura
+            //$('button').evento(); > a través de elemento
+            //$('.enviar').evento(); > a través de clase
+            //$('#btnEnviar').evento(); > a través de id
+            //get y set del párrafo
+
+            $('p').click(function() {
+                console.log($(this).text());
+                $(this).text('Esto es un texto por uso del this');
+            });
+
+            $('#btn1').click(function() {
+                let parrafo1 = $('#p1').text();
+                alert('Evento click: ' + parrafo1);
+                //set
+                $('#p1').text('Esto es un nuevo mensaje');
+
+            });
+
+            //funciones de efectos/animaciones
+            //hide() > ocultar elementos
+            $('#btn2').click(function() {
+                $('#p2').hide();
+
+            });
+            //show
+            $('#btn3').click(function() {
+                $('#p2').show();
+
+            });
+            //toggle
+            $('#btn4').click(function() {
+                $('#p2').toggle();
+
+            });
+            //slideUp
+            $('#btn5').click(function() {
+                $('#p3').slideUp('slow');
+
+            });
+            //slideDown
+            $('#btn6').click(function() {
+                $('#p3').slideDown(3000);
+
+            });
+            //slideToggle
+            $('#btn7').click(function() {
+                $('#p3').slideToggle('fast');
+
+            });
+            //fadeIn
+            $('#btn8').click(function() {
+                $('#p4').fadeIn();
+
+            });
+            //fadeOut
+            $('#btn9').click(function() {
+                $('#p4').fadeOut('slow');
+
+            });
+            //fadeToggle
+            $('#btn10').click(function() {
+                $('#p4').fadeToggle('3000');
+
+            });
+
+            //manipulación de elementos html
+            //after agrega después
+            $('#btn11').click(function() {
+                $('#p5').after('<h2>titulo h2</h2>');
+
+            });
+            //before agrega antes
+            $('#btn12').click(function() {
+                $('#p5').before('<h2>titulo h2</h2>');
+
+            });
+            //append agrega dentro del elemento, al final
+            $('#btn13').click(function() {
+                $('#p5').append('<span> Esto es span </span>');
+
+            });
+            //prepend agrega dentro del elemento, al principio
+            $('#btn14').click(function() {
+                $('#p5').prepend('<span> Esto es span </span>');
+
+            });
+            //attr agrega un atributo a un elemento html
+            $('#btn15').click(function() {
+                $('#p6').attr('name', 'parrafo6');
+                $('#p6').attr('style', 'color:red;font-size:30px');
+                $('#txt1').attr('value', 'generation 1');
+            });
+            //html agrega/crea un elemento html, pero borra todo lo anterior
+            $('#btn16').click(function() {
+                $('#p7').html('<span>Hehe</span>');
+
+            });
+            //val
+            $('#btn17').click(function() {
+                let valor = $('#txt2').val();
+                alert(valor);
+            });
+            //manipulación  de estilo
+            //css agregar un estilo a un elemento html
+            $('#btn18').click(function() {
+                $('#div1').html('<p id="p9" >Párrafo dentro del div</p>');
+                $('#p9').css("color", "gray");
+                $('#p9').css("font-size", "30px");
+            });
+            //addClass
+            $('#btn19').click(function() {
+                $('#div1').addClass('divColor');
+            });
+            //quita todas las clases o la especificada
+            $('#btn20').click(function() {
+                $('#div1').removeClass('divColor');
+            });
+            //fin jquery
+        });
+    </script>
+    <style>
+        .divColor {
+            width: 400px;
+            height: 200px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">Este es un párrafo 1</p>
+    <button id="btn1">Get y Set</button>
+    <br>
+    <hr>
+    <!-- Efectos -->
+    <!-- Hidde show toggle -->
+    <p id="p2">Este es un párrafo 2</p>
+    <button id="btn2">Hidde</button>
+    <button id="btn3">Show</button>
+    <button id="btn4">Toggle</button>
+    <br>
+    <hr>
+    <!-- slideUp slideDown slideToggle -->
+    <p id="p3">Este es un párrafo 3</p>
+    <button id="btn5">slideUp</button>
+    <button id="btn6">slideDown</button>
+    <button id="btn7">slideToggle</button>
+    <br>
+    <hr>
+    <!-- fadeIn fadeOut fadeToggle  -->
+    <p id="p4">Este es un párrafo 4</p>
+    <button id="btn8">fadeIn</button>
+    <button id="btn9">fadeOut</button>
+    <button id="btn10">fadeToggle</button>
+    <br>
+    <hr>
+    <!-- manipulación -->
+    <h1>Esto es un elemento html</h1>
+    <p id="p5">Este es un párrafo 5</p>
+    <button id="btn11">after()</button>
+    <button id="btn12">before()</button>
+    <button id="btn13">append()</button>
+    <button id="btn14">prepend()</button>
+    <br>
+    <hr>
+    <h1>Esto es un elemento html attr</h1>
+    <p id="p6">Este es un párrafo 6</p>
+    <input type="text" id="txt1">
+    <button id="btn15">attr()</button>
+    <br>
+    <hr>
+    <!-- html -->
+    <p id="p7">Este es un párrafo 7</p>
+    <button id="btn16">html()</button>
+    <br>
+    <hr>
+    <!-- val -->
+    <h1>Esto es un elemento html val</h1>
+    <p id="p8">Este es un párrafo 8</p>
+    <input type="text" id="txt2" value="valor input txt2">
+    <button id="btn17">val()</button>
+    <br>
+    <hr>
+    <!-- manipulación de estilos -->
+    <div id="div1"></div>
+    <button id="btn18">css()</button>
+    <button id="btn19">addClass()</button>
+    <button id="btn20">removeClass()</button>
+</body>
+
+</html>
